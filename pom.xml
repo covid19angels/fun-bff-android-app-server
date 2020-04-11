@@ -58,7 +58,11 @@
             <optional>true</optional>
         </dependency>
 
-
+        <dependency>
+            <groupId>com.bdlbsc</groupId>
+            <artifactId>fun-bff-request-response-common</artifactId>
+            <version>latest</version>
+        </dependency>
     </dependencies>
 
     <build>
