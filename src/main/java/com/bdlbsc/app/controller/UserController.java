@@ -9,6 +9,9 @@ import com.bdlbsc.common.user.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * 用户中心 API
+ */
 @RestController
 @Slf4j
 public class UserController {
@@ -65,6 +68,12 @@ public class UserController {
     }
 
 
+    /**
+     * 用户名注册
+     *
+     * @param request
+     * @return
+     */
     @PostMapping(value = USERAPI.REGISTERED_USERNAME)
     @ResponseBody
     public Result<UserRegisteredUsernameResponse> registeredUsername(UserRegisteredUsernameRequest request) {
@@ -73,6 +82,12 @@ public class UserController {
     }
 
 
+    /**
+     * 手机号注册请求验证码
+     *
+     * @param request
+     * @return
+     */
     @PostMapping(value = USERAPI.REGISTERED_PHONENUMBER_REQUEST_VERIFICATIONCODE)
     @ResponseBody
     public Result<UserRegisteredPhonenumberRequestVerifocationCodeResponse> registeredPhonenumberRequestVerifocationCode(UserRegisteredPhonenumberRequestVerifocationCodeRequest request) {
@@ -80,6 +95,12 @@ public class UserController {
         return result;
     }
 
+    /**
+     * 手机号注册
+     *
+     * @param request
+     * @return
+     */
     @PostMapping(value = USERAPI.REGISTERED_PHONENUMBER)
     @ResponseBody
     public Result<UserRegisteredPhonenumberResponse> registeredPhonenumber(UserRegisteredPhonenumberRequest request) {

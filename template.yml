@@ -1,11 +1,11 @@
 ROSTemplateFormatVersion: '2015-09-01'
 Transform: Aliyun::Serverless-2018-04-03
 Resources:
-  android-app-service:
+  android-app:
     Type: Aliyun::Serverless::Service
     Properties:
       Description: Hello SpringBoot On FC
-    user:
+    service:
       Type: Aliyun::Serverless::Function
       Properties:
         Initializer: com.bdlbsc.app.FcHandler::initialize
@@ -16,7 +16,7 @@ Resources:
         Timeout: 60.0
         InitializationTimeout: 60.0
         EnvironmentVariables:
-          USER_CONTEXT_PATH: /2020-04-10/proxy/android-app-service/user
+          USER_CONTEXT_PATH: /2020-04-10/proxy/android-app/service
           APP_BASE_DIR: /tmp
       Events:
         http:
